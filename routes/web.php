@@ -14,7 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $data = [
+        'nome' => 'Alessio',
+        'cognome' => 'Verdi',
+        'competenze' => [
+            'patente infomatica',
+            'certificato di inglese',
+            'PHP',
+            'Javascript'
+        ]
+    ];
+    return view('home', $data);
 });
 
 Route::get('/about', function () {

@@ -8,6 +8,12 @@
 </head>
 <body>
     <h1>HomePage</h1>
-    
+    <p>Benvenuti nella pagina di {{$nome}} {{$cognome}} </p>
+    <ul>
+    Queste sono le mie competenze:
+    @foreach($competenze as $competenza)
+    <li> {{$competenza}} </li>
+    @endforeach
+    </ul>
 </body>
 </html>
